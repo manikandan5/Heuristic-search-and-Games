@@ -44,12 +44,6 @@ def makeArray(n,state):
             k=k+1
     return array
 
-"""def findMove(state,n):
-    soln=state
-    if (calcGoal(state,n)=="Pass"):
-        return soln
-    return "Fail"""""
-
 """Terminal Status Check- Returns Fail if the state matches any of the condition
 else returns Pass"""
 def calcGoal(state,n):
@@ -63,7 +57,6 @@ def calcGoal(state,n):
 """Row Check for each state"""
 def rowCheck(state,n):
     count = 0
-    k=0
     fail="no"
     for i in range(n):
         for j in range(n):
@@ -79,7 +72,6 @@ def rowCheck(state,n):
 """Column Check for each state"""
 def colCheck(state,n):
     count = 0
-    k=0
     fail="no"
     for j in range(n):
         for i in range(n):
@@ -95,7 +87,6 @@ def colCheck(state,n):
 def diagCheck(state,n):
     count = 0
     count1=0
-    k=0
     fail="no"
     for i in range(n):
         if state[i][i]=="x":
