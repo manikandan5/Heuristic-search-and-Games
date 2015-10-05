@@ -1,4 +1,31 @@
 """Program to play Rameses"""
+
+"""Program follows Iterative deepening algorithm and assigns MinMax values to each state while it traverses through the levels
+
+The Evaluative function used in this program is 
+    if(Diagonal or Row or Column) violates the game rules
+        then we assign -1 to that state.
+    if the next move results in a terminal state which results in the human player losing,
+        we assign +1
+    for all the other states,
+        we assign 0
+
+Sample input to the program is :
+    python rameses.py 3 ..x..x... 3
+    
+    ramese.py   - program name
+    
+    3           - Dimensions of the grid N
+    
+    ..x..x...   - Initial State of the board
+    
+    3           - Time limit
+    
+Sample Output would be:
+    .xx..x...   which represents the move of the player
+    
+    
+"""
 import time
 import random
 import sys
